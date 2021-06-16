@@ -1,0 +1,176 @@
+
+/* 类型列表 */
+.booktype_wrapper{
+  width:100%;
+}
+.booktype_wrapper.padding{
+  padding-bottom:520rpx;
+}
+.booktype_item{
+  float:left;
+  margin-top:20rpx;
+  margin-left:25rpx;
+  margin-right:25rpx;
+  width:100rpx;
+  height:150rpx;
+}
+.booktype_image_wrapper{
+  padding:25rpx;
+  box-sizing:border-box;
+  width:100rpx;
+  height:100rpx;
+  background:#eee;
+  border-radius:50%;
+}
+.booktype_item.active .booktype_image_wrapper{
+  background:#ffd700;
+}
+.booktype_image_wrapper image{
+  display:block;
+  width:50rpx;
+  height:50rpx;
+}
+.booktype_item text{
+  display:block;
+  width:100%;
+  height:40rpx;
+  line-height:40rpx;
+  font-size:26rpx;
+  text-align:center;
+}
+/* 顶部 */
+.padding_80{
+  width:100%;
+  height:80rpx;
+}
+.tabs_wrapper{
+  position:fixed;
+  left:0;
+  top:0;
+  display:flex;
+  justify-content: center;
+  width:100%;
+  height:80rpx;
+  background:#ffd700;
+}
+.tabs_wrapper text{
+  width:100rpx;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:30rpx;
+  text-align:center;
+}
+.tabs_wrapper text.active{
+  border-bottom:4rpx solid #666;
+}
+/* 键盘 */
+.keyboard_wrapper{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:520rpx;
+  background:#eee;
+}
+.keyboard_remark{
+  float:left;
+  width:400rpx;
+  height:100%;
+}
+.keyboard_remark image{
+  float:left;
+  margin-left:20rpx;
+  margin-top:36rpx;
+  width:30rpx;
+  height:30rpx;
+}
+.keyboard_remark input{
+  float:left;
+  width:340rpx;
+  height:104rpx;
+  line-height:104rpx;
+  text-indent:10rpx;
+}
+.keyboard_top{
+  width:100%;
+  height:104rpx;
+  line-height:104rpx;
+  font-size:30rpx;
+}
+.keyboard_amt{
+  padding-right:20rpx;
+  box-sizing:border-box;
+  float:left;
+  width:350rpx;
+  height:104rpx;
+  line-height:104rpx;
+  font-size:40rpx;
+  text-align:right;
+}
+.keyboard_bottom{
+  width:100%;
+}
+.keyboard_item{
+  float:left;
+  box-sizing:border-box;
+  width:25%;
+  height:104rpx;
+  line-height:104rpx;
+  font-size:40rpx;
+  text-align:center;
+  border-top:1rpx solid #ccc;
+  border-right:1rpx solid #ccc;
+}
+.keyboard_item:nth-child(4n){
+  border-right:0;
+}
+.keyboard_item.date image{
+  display:inline-block;
+  margin-top:36rpx;
+  margin-right:10rpx;
+  width:30rpx;
+  height:30rpx;
+}
+.keyboard_item.date{
+  font-size:30rpx;
+}
+.keyboard_item.del image{
+  display:block;
+  margin:21rpx auto;
+  width:60rpx;
+  height:60rpx;
+}
+.keyboard_item.btn{
+  background:#ffd700;
+}
+.keyboard_item.plan{
+  font-size:24rpx;
+}
+.remark_tips{
+  position:absolute;
+  left:0;
+  top:-60rpx;
+  padding:0 20rpx;
+  box-sizing:border-box;
+  width:100%;
+  height:60rpx;
+  line-height:60rpx;
+  font-size:30rpx;
+  background:rgba(0,0,0,.3);
+}
+.remark_tips text{
+  float:left;
+  margin-right:20rpx;
+  color:#fff;
+}
+.remark_tips .remark_tip{
+  margin-top:10rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  height:40rpx;
+  line-height:40rpx;
+  font-size:24rpx;
+  background:#fff;
+  color:#000;
+  border-radius:30rpx;
+}

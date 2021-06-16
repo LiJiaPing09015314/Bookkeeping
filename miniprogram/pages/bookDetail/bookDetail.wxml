@@ -1,0 +1,28 @@
+<block wx:if="{{bookDetail != null}}">
+  <view class="detail_header">
+    <view class="detail_img_wrapper">
+      <image src="{{'/utils/icons/'+bookDetail.bookTypeIcon+'.png'}}"></image>
+    </view>
+    <text>{{bookDetail.bookTypeName}}</text>
+  </view>
+  <view class="detail_item">
+    <text class="detail_left">类型</text>
+    <text class="detail_right">{{bookDetail.amtType==0?'支出':'收入'}}</text>
+  </view>
+  <view class="detail_item">
+    <text class="detail_left">金额</text>
+    <text class="detail_right">{{bookDetail.bookAmt}}</text>
+  </view>
+  <view class="detail_item">
+    <text class="detail_left">日期</text>
+    <text class="detail_right">{{bookDetail.bookYear+'年'+bookDetail.bookMonth+'月'+bookDetail.bookDate+'日 星期'+['日','一','二','三','四','五','六'][bookDetail.week]}}</text>
+  </view>
+  <view wx:if="{{bookDetail.remark}}" class="detail_item">
+    <text class="detail_left">备注</text>
+    <text class="detail_right">{{bookDetail.remark}}</text>
+  </view>
+</block>
+<view class="detail_footer">
+  <text catchtap="toEdit" class="edit">编辑</text>
+  <text catchtap="toDelete">删除</text>
+</view>

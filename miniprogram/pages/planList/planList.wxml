@@ -1,0 +1,32 @@
+<!-- 账单类型 -->
+<import src="/components/amtType.wxml"/>
+<template is="amtType" data="{{amtType}}"></template>
+<!-- 计划列表 -->
+<view class="planlist_wrapper clearfix">
+  <view class="plan_type_list clearfix {{deleteBtnIdx==idx?'active':''}}" wx:for="{{planList}}" wx:for-index="idx" wx:key="{{idx}}">
+    <text class="delete_icon" catchtap="showDeleteBtn" data-idx="{{idx}}"></text>
+    <view class="icon_wrapper">
+      <image src="{{'/utils/icons/'+item.icon+'.png'}}"></image>
+    </view>
+    <text class="plan_type_name" catchtap="hideDeleteBtn">{{item.name}}</text>
+    <text class="drag_icon" catchtap="showPlanInfo" data-idx="{{idx}}">三</text>
+    <text class="plan_type_delete" catchtap="deletePlanList" data-idx="{{idx}}">删除</text>
+    <!-- 计划详情 -->
+    <view class="plan_type_info {{item.showInfo?'active':''}}" catchtap="toPlanDetail" data-idx="{{idx}}">
+      <text class="plan_type_info_goal">{{item.type==0?'消费':'存储'}}：{{item.planAmt}}元</text>
+      <text>{{item.type==0?'已花':'已存'}}：{{item.total}}元</text>
+      <text>{{item.diffAmt == 0 ?'计划完成':(item.diffAmt>0?(item.type==0?'剩余：':'还差：'):(item.type==0?'超出：':'多存：'))+formatData.mathAbs(item.diffAmt)+'元'}}</text>
+    </view>
+  </view>
+</view>
+<!-- 添加计划 -->
+<text catchtap="addPlanType" class="add_plantype_btn">+添加计划</text>
+<!-- 格式化数据 -->
+<wxs module="formatData">
+  var mathAbs = function(data){
+    return Math.abs(data);
+  }
+  module.exports = {
+    mathAbs:mathAbs
+  }
+</wxs>

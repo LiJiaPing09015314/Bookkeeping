@@ -1,0 +1,29 @@
+<template name="footer">
+  <view class="padding_100"></view>
+  <view class="footer_wrapper">
+    <view class="footer_item {{footerIndex==0?'active':''}}" catchtap="changeFooter" data-url="index">
+      <view class="footer_image_wrapper">
+        <image src="/utils/icons/icon_177.png"></image>
+      </view>
+      <text>首页</text>
+    </view>
+    <view class="footer_item {{footerIndex==1?'active':''}}" catchtap="changeFooter" data-url="chart">
+      <view class="footer_image_wrapper">
+        <image src="/utils/icons/icon_169.png"></image>
+      </view>
+      <text>图表</text>
+    </view>
+    <view class="footer_item {{footerIndex==2?'active':''}}" catchtap="changeFooter" data-url="addBook" data-method="navigate">
+      <view class="footer_image_wrapper">
+        <image src="/utils/icons/icon_165.png"></image>
+      </view>
+      <text>记账</text>
+    </view>
+    <view class="footer_item {{footerIndex==3?'active':''}}" catchtap="changeFooter" data-url="my" data-type="my">
+      <view class="footer_image_wrapper">
+        <image src="/utils/icons/icon_172.png"></image>
+      </view>
+      <text>我的</text>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,102 @@
+page{
+  width:100%;
+  height:100%;
+  /* background:#f8f8f8; */
+}
+
+
+/* 列表 */
+.book_type_list_wrapper{
+  padding-bottom:120rpx;
+  margin:0 auto;
+  width:700rpx;
+  overflow-x:hidden;
+  background:#fff;
+}
+.book_type_list{
+  position:relative;
+  left:0;
+  margin:0 auto;
+  width:800rpx;
+  height:80rpx;
+  line-height:80rpx;
+  border-bottom:1rpx solid #eee;
+  overflow-x:scroll;
+  transition: all .3s;
+  -webkit-overflow-scrolling: touch;
+}
+.book_type_list.active{
+  left:-100rpx;
+}
+.delete_icon{
+  margin-top:20rpx;
+  position:relative;
+  float:left;
+  width:40rpx;
+  height:40rpx;
+  background:#f00;
+  border-radius:50%;
+}
+.delete_icon::after{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  content:'';
+  width:20rpx;
+  height:4rpx;
+  background:#fff;
+}
+.icon_wrapper{
+  margin-left:20rpx;
+  margin-top:10rpx;
+  float:left;
+  width:60rpx;
+  height:60rpx;
+  background:#eee;
+  border-radius:50%;
+}
+.icon_wrapper image{
+  display:block;
+  margin:10rpx auto 0;
+  width:40rpx;
+  height:40rpx;
+}
+.book_type_name{
+  float:left;
+  margin-left:10rpx;
+  width:514rpx;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:28rpx;
+}
+.drag_icon{
+  float:left;
+  width:60rpx;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:40rpx;
+  color:#eee;
+}
+.book_type_delete{
+  float:left;
+  width:100rpx;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:30rpx;
+  color:#fff;
+  text-align:center;
+  background:#EE3B3B;
+}
+
+.add_booktype_btn{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:30rpx;
+  text-align:center;
+  background:#fff;
+}

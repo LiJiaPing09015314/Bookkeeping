@@ -1,0 +1,108 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "enhance": true
+  },
+  "appid": "wx387d95cbaee4e92b",
+  "projectname": "%E8%AE%B0%E8%B4%A6%E6%9C%AC",
+  "libVersion": "2.8.1",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": 1,
+          "name": "添加类型",
+          "pathName": "pages/addBookType/addBookType",
+          "query": "ptype=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "类型列表",
+          "pathName": "pages/bookTypeList/bookTypeList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "添加账单",
+          "pathName": "pages/addBook/addBook",
+          "query": "id=7799745c5def45c201eb90f5355f3c20&tab=0",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "账单详情",
+          "pathName": "pages/bookDetail/bookDetail",
+          "query": "id=075734515d81f9440014cf75140c9676",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "图表",
+          "pathName": "pages/chart/chart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "计划列表",
+          "pathName": "pages/planList/planList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "测试",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

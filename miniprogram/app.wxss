@@ -1,0 +1,154 @@
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+view,text,image{
+  box-sizing:border-box;
+}
+/* 底部 */
+.padding_100{
+  width:100%;
+  height:100rpx;
+}
+.footer_wrapper{
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:100rpx;
+  background:#eee;
+  border-top:1rpx solid #ccc;
+}
+.footer_item{
+  float:left;
+  width:25%;
+  height:100rpx;
+}
+.footer_image_wrapper{
+  padding-top:5rpx;
+  box-sizing:border-box;
+  display:block;
+  margin:10rpx auto 0;
+  width:50rpx;
+  height:50rpx;
+  border-radius:50%;
+}
+.footer_image_wrapper image{
+  margin:0 auto;
+  display:block;
+  width:40rpx;
+  height:40rpx;
+}
+.footer_item.active .footer_image_wrapper{
+  background:#ffd700;
+}
+.footer_item text{
+  display:block;
+  width:100%;
+  height:40rpx;
+  line-height:40rpx;
+  font-size:24rpx;
+  text-align:center;
+}
+/* 账单类型 */
+.amt_type_wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:80rpx;
+  background:#ffd700;
+}
+.amt_type{
+  width:200rpx;
+  height:40rpx;
+  line-height:40rpx;
+  font-size:28rpx;
+  color:#333;
+  border:1rpx solid #333;
+  text-align:center;
+}
+.amt_type:first-child{
+  border-right:0;
+  border-radius:10rpx 0 0 10rpx;
+}
+.amt_type:last-child{
+  border-radius:0 4rpx 4rpx 0;
+}
+.amt_type.active{
+  background:#333;
+  color:#ffd700;
+}
+/* 账单列表 */
+.book_list_wrapper{
+  width:100%;
+}
+.book_list_item{
+  width:100%;
+  height:100rpx;
+}
+.book_list_title{
+  padding-left:20rpx;
+  float:left;
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:30rpx;
+  font-weight:bold;
+}
+.book_list_title text{
+  float:left;
+  margin-right:20rpx;
+  font-weight:normal;
+  text-indent:0;
+  color:#666;
+}
+.book_list_title text.bold{
+  font-weight:bold;
+}
+.book_list_img_wrapper{
+  float:left;
+  padding:10rpx;
+  margin:20rpx;
+  width:60rpx;
+  height:60rpx;
+  border-radius:50%;
+  background:#eee;
+}
+.book_list_img_wrapper image{
+  display:block;
+  width:40rpx;
+  height:40rpx;
+}
+.book_list_item_info{
+  float:left;
+  width:620rpx;
+  height:100rpx;
+  border-bottom:1rpx solid #eee;
+}
+.book_list_item_top{
+  padding-top:20rpx;
+  width:100%;
+  height:60rpx;
+}
+.book_list_item_name,.book_list_item_amt{
+  float:left;
+  width:300rpx;
+  height:40rpx;
+  line-height:40rpx;
+  font-size:24rpx;
+}
+.book_list_item_amt{
+  float:right;
+  text-align:right;
+}
+.book_list_progress{
+  display:block;
+  height:12rpx;
+  border-radius:6rpx;
+  background:#ffd700;
+}

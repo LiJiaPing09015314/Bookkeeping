@@ -1,0 +1,37 @@
+<!-- 计划详情页 -->
+<view class="book_list_wrapper clearfix">
+  <view class="book_list_title">
+    <text class="bold">{{plan.name}}</text>
+    <text>{{plan.type==0?'花费':'存储'}}：{{plan.planAmt}}元</text>
+    <text>{{plan.type==0?'已花：':'已存：'}}{{plan.planAmt}}</text>
+    <text wx:if="{{plan.diffAmt == 0}}">计划完成</text>
+    <text wx:elif="{{plan.diffAmt > 0}}">{{plan.type==0?'剩余':'还差'}}：{{formatData.mathAbs(plan.diffAmt)}}元</text>
+    <text wx:else>{{plan.type==0?'超出':'多存'}}：{{formatData.mathAbs(plan.diffAmt)}}元</text>
+  </view>
+  <view class="book_list_item" wx:for="{{bookList}}" wx:for-index="idx" wx:key="{{idx}}" >
+    <view class="book_list_img_wrapper">
+      <image src="{{'/utils/icons/'+item.bookTypeIcon+'.png'}}"></image>
+    </view>
+    <view class="book_list_item_info">
+      <view class="book_list_item_top">
+        <text class="book_list_item_name">{{item.remark?item.remark:item.bookTypeName}} {{formatData.getPercent(item.bookAmt,plan.planAmt)}}%</text>
+        <text class="book_list_item_amt">{{item.bookAmt}}</text>
+      </view>
+      <view class="book_list_progress" style="width:{{formatData.getPercent(item.bookAmt,plan.planAmt)}}%;"></view>
+    </view>
+  </view>
+</view>
+<!-- 格式化数据 -->
+<wxs module="formatData">
+  var mathAbs = function(data){
+    return Math.abs(data);
+  }
+  var getPercent = function(data,total){
+    var percent = (data / total).toFixed(4)*10000;
+    return parseInt(percent)/100;
+  }
+  module.exports = {
+    mathAbs:mathAbs,
+    getPercent:getPercent
+  }
+</wxs>

@@ -1,0 +1,17 @@
+<view class="user_info_wrapper clearfix">
+  <view class="user_ifno_avatar_wrapper">
+    <open-data class="user_ifno_avatar" type="userAvatarUrl"></open-data>
+  </view>
+  <open-data class="user_info_nickname" type="userNickName"></open-data>
+</view>
+<!-- 菜单们 -->
+<view class="menus_wrapper clearfix">
+  <view class="menu_item" wx:for="{{menus}}" wx:for-index="idx" wx:key="{{idx}}" 
+    catchtap="menuClick" data-idx="{{idx}}">
+    <image src="{{'/utils/icons/'+item.icon+'.png'}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+<!-- 底部 -->
+<import src="/components/footer.wxml"/>
+<template is="footer" data="{{footerIndex}}"></template>

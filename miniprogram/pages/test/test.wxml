@@ -1,0 +1,4 @@
+<canvas class="canvas" canvas-id='customCanvas' 
+  catchlongpress="qrCodeLongpress"
+  style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;">
+</canvas>

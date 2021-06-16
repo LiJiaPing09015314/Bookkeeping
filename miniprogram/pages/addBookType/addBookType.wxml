@@ -1,0 +1,22 @@
+<view class="add_type_wrapper clearfix">
+  <view class="icon_wrapper active">
+    <image src="{{'../../utils/icons/'+iconList[indexX].icons[indexY]+'.png'}}"></image>
+  </view>
+  <input class="icon_type_text" type="text" placeholder="请输入{{pageType==0?'类别':'计划'}}名称（不超过6个汉字）" 
+    bindinput="setType" value="{{typeText}}"></input>
+  <input wx:if="{{pageType==1}}" class="icon_type_text" type="digit" placeholder="请输入计划金额" 
+    bindinput="setPlanAmt" value="{{planAmt}}"></input>
+  <text catchtap="addType" class="add_type_btn">完成</text>
+</view>
+<!-- 类别列表 -->
+<view class="icon_list_wrapper clearfix"
+  wx:for="{{iconList}}" wx:for-index="idx" wx:key="{{idx}}">
+  <text class="icon_type_title">{{item.name}}</text>
+  <view class="icon_list">
+    <view class="icon_wrapper {{indexX==idx && indexY==idy?'active':''}}" 
+      catchtap="selectIcon" data-idx="{{idx}}" data-idy="{{idy}}"
+      wx:for="{{item.icons}}" wx:for-item="icon" wx:for-index="idy" wx:key="{{idy}}">
+      <image src="{{'../../utils/icons/'+icon+'.png'}}"></image>
+    </view>
+  </view>
+</view>

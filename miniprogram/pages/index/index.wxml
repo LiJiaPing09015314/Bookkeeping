@@ -1,0 +1,36 @@
+<!-- 头部 -->
+<view class="header_wrapper">
+  <view class="header_item header_date">
+    <text>{{selectYear}}年</text>
+    <picker mode="date" value="{{date}}" fields="month" bindchange="selectDate">
+      <text class="header_date_month">{{selectMonth}}月</text>
+    </picker>
+  </view>
+  <view class="header_item">
+    <text>收入</text>
+    <text class="last">{{incomeAmt}}</text>
+  </view>
+  <view class="header_item">
+    <text>支出</text>
+    <text class="last">{{payAmt}}</text>
+  </view>
+</view>
+<view class="padding_120"></view>
+<!-- 列表 -->
+<view class="book_list_wrapper clearfix" wx:for="{{bookList}}" wx:for-index="idx" wx:key="{{idx}}">
+  <view class="book_list_header">
+    <text>{{selectMonth}}月{{item.date}}日 星期{{item.week}}</text>
+    <text class="book_list_right">{{item.incomeAmt?'收入：'+item.incomeAmt:''}}  {{item.payAmt?'支出：'+item.payAmt:''}}</text>
+  </view>
+  <view class="book_list_item" wx:for="{{item.list}}" wx:for-index="idy" wx:key="{{idy}}" wx:for-item="list"
+    catchtap="toBookDetail" data-id="{{list._id}}">
+    <view class="icon_wrapper">
+      <image src="{{'/utils/icons/'+list.bookTypeIcon+'.png'}}"></image>
+    </view>
+    <text>{{list.remark?list.remark:list.bookTypeName}}</text>
+    <text class="book_list_item_amt">{{list.amtType==0?-list.bookAmt:list.bookAmt}}</text>
+  </view>
+</view>
+
+<import src="/components/footer.wxml"/>
+<template is="footer" data="{{footerIndex}}"></template>

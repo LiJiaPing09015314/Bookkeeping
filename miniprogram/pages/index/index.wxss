@@ -1,0 +1,102 @@
+.padding_120{
+  width:100%;
+  height:120rpx;
+}
+.header_wrapper{
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:120rpx;
+  background:#ffd700;
+}
+.header_item{
+  padding-top:10rpx;
+  box-sizing:border-box;
+  float:left;
+  width:40%;
+  height:100rpx;
+  text-align:left;
+}
+.header_item.header_date{
+  width:20%;
+  text-align:center;
+}
+.header_item text{
+  display:block;
+  width:100%;
+  height:50rpx;
+  line-height:50rpx;
+  font-size:24rpx;
+}
+.header_item text.header_date_month{
+  position:relative;
+  font-size:30rpx;
+}
+.header_item text.header_date_month::after{
+  position:absolute;
+  top:20rpx;
+  right:18rpx;
+  content:'';
+  border:10rpx solid transparent;
+  border-top-color:#000;
+}
+/* 列表 */
+.book_list_wrapper{
+  width:100%;
+}
+.book_list_header{
+  width:100%;
+  height:80rpx;
+  border-bottom:1rpx solid #eee;
+  color:#ccc;
+}
+.book_list_header text{
+  padding:0 20rpx;
+  box-sizing:border-box;
+  float:left;
+  width:50%;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:30rpx;
+  text-align:left;
+}
+.book_list_header .book_list_right{
+  text-align:right;
+}
+.book_list_item{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+}
+.book_list_item .icon_wrapper{
+  padding:15rpx;
+  box-sizing:border-box;
+  float:left;
+  margin:15rpx;
+  width:70rpx;
+  height:70rpx;
+  border-radius:50%;
+  background:#eee;
+}
+.book_list_item .icon_wrapper image{
+  display:block;
+  width:40rpx;
+  height:40rpx;
+}
+.book_list_item text{
+  float:left;
+  width:400rpx;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:30rpx;
+  color:#333;
+  border-bottom:1rpx solid #eee;
+  box-sizing:border-box;
+}
+.book_list_item .book_list_item_amt{
+  padding-right:20rpx;
+  width:250rpx;
+  color:#000;
+  text-align:right;
+}

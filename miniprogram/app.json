@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/addBookType/addBookType",
+    "pages/bookTypeList/bookTypeList",
+    "pages/addBook/addBook",
+    "pages/chart/chart",
+    "pages/planList/planList",
+    "pages/bookDetail/bookDetail",
+    "pages/my/my",
+    "pages/planBookList/planBookList",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffd700",
+    "navigationBarTitleText": "记账本",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

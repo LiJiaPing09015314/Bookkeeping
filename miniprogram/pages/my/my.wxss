@@ -1,0 +1,58 @@
+page{
+  background:#f8f8f8;
+}
+.user_info_wrapper{
+  padding:20rpx;
+  box-sizing:border-box;
+  width:100%;
+  background:#ffd700;
+}
+.user_ifno_avatar_wrapper{
+  float:left;
+  width:100rpx;
+  height:100rpx;
+  border-radius:50%;
+  overflow:hidden;
+}
+.user_info_avatar{
+  width:100rpx;
+  height:100rpx;
+}
+.user_info_nickname{
+  float:right;
+  width:600rpx;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:30rpx;
+}
+
+/* 菜单 */
+.menus_wrapper{
+  margin:20rpx auto;
+  padding:20rpx;
+  box-sizing:border-box;
+  width:700rpx;
+  border-radius:10rpx;
+  background:#fff;
+}
+.menu_item{
+  float:left;
+  margin-left:10rpx;
+  width:100rpx; 
+  height:90rpx;
+}
+.menu_item image{
+  margin:0 auto 10rpx;
+  display:block;
+  width:50rpx;
+  height:50rpx;
+}
+.menu_item text{
+  display:block;
+  width:100%;
+  height:40rpx;
+  line-height:40rpx;
+  font-size:26rpx;
+  color:#666;
+  text-align:center;
+}
