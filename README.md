@@ -17,8 +17,8 @@
 2、哪些云函数需要部署 cloudfunctions 里面的云函数需要部署 点击模块文件夹右键-》上传并部署（不用传node_modules包）
 
 # 效果
-![图片](1.png)
-![图片](2.png)
-![图片](3.png)
-![图片](/LiJiaPing09015314/Bookkeeping/raw/master/5.png)
-![图片](./5.png)
+- ![图片](1.png)
+- ![图片](2.png)
+- ![图片](3.png)
+- ![图片](4.png)
+- ![图片](5.png)
