@@ -10,12 +10,12 @@
 </view>
 <!-- 类别列表 -->
 <view class="icon_list_wrapper clearfix"
-  wx:for="{{iconList}}" wx:for-index="idx" wx:key="{{idx}}">
+  wx:for="{{iconList}}" wx:for-index="idx" wx:key="idx">
   <text class="icon_type_title">{{item.name}}</text>
   <view class="icon_list">
     <view class="icon_wrapper {{indexX==idx && indexY==idy?'active':''}}" 
       catchtap="selectIcon" data-idx="{{idx}}" data-idy="{{idy}}"
-      wx:for="{{item.icons}}" wx:for-item="icon" wx:for-index="idy" wx:key="{{idy}}">
+      wx:for="{{item.icons}}" wx:for-item="icon" wx:for-index="idy" wx:key="idy">
       <image src="{{'../../utils/icons/'+icon+'.png'}}"></image>
     </view>
   </view>

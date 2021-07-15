@@ -8,7 +8,7 @@
     <text wx:elif="{{plan.diffAmt > 0}}">{{plan.type==0?'剩余':'还差'}}：{{formatData.mathAbs(plan.diffAmt)}}元</text>
     <text wx:else>{{plan.type==0?'超出':'多存'}}：{{formatData.mathAbs(plan.diffAmt)}}元</text>
   </view>
-  <view class="book_list_item" wx:for="{{bookList}}" wx:for-index="idx" wx:key="{{idx}}" >
+  <view class="book_list_item" wx:for="{{bookList}}" wx:for-index="idx" wx:key="idx" >
     <view class="book_list_img_wrapper">
       <image src="{{'/utils/icons/'+item.bookTypeIcon+'.png'}}"></image>
     </view>

@@ -3,13 +3,13 @@ const cloud = require('wx-server-sdk')
 
 cloud.init({
   traceUser:true,
-  // env: 'test-gp4ml'
+  // env:'book-5gutgylj4b76278c'
 });
 const db = cloud.database();
 // 云函数入口函数
 exports.main = async (event, context) => {
   return await db.collection('bookType').where({
     _id:event.id,
-    _openid:event._openid
+    openid:event.userInfo.openid
   }).remove();
 }

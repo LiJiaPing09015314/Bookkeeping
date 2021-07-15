@@ -1,9 +1,8 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
-
 cloud.init({
   traceUser: true,
-  // env: 'test-gp4ml'
+  // env:'book-5gutgylj4b76278c'
 });
 const db = cloud.database();
 // 云函数入口函数

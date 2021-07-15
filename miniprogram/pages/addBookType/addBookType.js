@@ -1,7 +1,5 @@
 let app = getApp();
 import {iconList} from '../../utils/js/iconList.js';
-//获取数据库引用 
-const db = wx.cloud.database();
 Page({
   data: {
     pageType:'0',//页面类型,0账单,1计划

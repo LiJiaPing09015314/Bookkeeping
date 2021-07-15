@@ -14,12 +14,12 @@
 <!-- 选择日期 -->
 <scroll-view scroll-x class="date_range">
   <text class="date_range_item {{dateTypeIdx==idx?'active':''}}" catchtap="cliDateRange" data-idx="{{idx}}"
-    wx:for="{{dateType==1?monthArr:yearArr}}" wx:for-index="idx" wx:key="{{idx}}">{{item+(dateType==1?'月':'')}}</text>
+    wx:for="{{dateType==1?monthArr:yearArr}}" wx:for-index="idx" wx:key="idx">{{item+(dateType==1?'月':'')}}</text>
 </scroll-view>
 <!-- 账单列表 -->
 <view class="book_list_wrapper clearfix">
   <text class="book_list_title">{{amtType==0?'支出':'收入'}}排行榜（总{{amtType==0?'支出':'收入'}}：{{chartListCount}}元）</text>
-  <view class="book_list_item" wx:for="{{chartList}}" wx:for-index="idx" wx:key="{{idx}}"
+  <view class="book_list_item" wx:for="{{chartList}}" wx:for-index="idx" wx:key="idx"
     catchtap="toChartDetail" data-id="{{item._id.bookTypeId}}" >
     <view class="book_list_img_wrapper">
       <image wx:if="{{id}}" src="{{'/utils/icons/'+item.bookTypeIcon+'.png'}}"></image>

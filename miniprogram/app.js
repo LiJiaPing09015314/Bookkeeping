@@ -9,13 +9,11 @@ App({
         //   env 参数决定接下来小程序发起的云开发调用（wx.cloud.xxx）会默认请求到哪个云环境的资源
         //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
         //   如不填则使用默认环境（第一个创建的环境）
-        // env: 'my-env-id',
         traceUser: true,
-        // env: 'test-gp4ml'
-        // env:'apgy-876ffd'
+        // env: 'book-5gutgylj4b76278c'
       })
-      this.globalData = {}
     }
+    this.globalData = {}
   },
   getAjax(opts){//请求接口
     wx.showLoading({
@@ -27,7 +25,7 @@ App({
       name: opts.url,
       // 传给云函数的参数
       // data:opts.params?opts.params:{},
-      data:{...opts.params,_openid:this.globalData.openid},
+      data:{...opts.params,userInfo:{openId:this.globalData.openid}},
       success: function (res) {
         if(opts.success){
           opts.success(res);

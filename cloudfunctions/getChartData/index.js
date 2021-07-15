@@ -3,7 +3,7 @@ const cloud = require('wx-server-sdk')
 
 cloud.init({
   traceUser: true,
-  // env: 'test-gp4ml'
+  // env:'book-5gutgylj4b76278c'
 });
 const db = cloud.database();
 const $ = db.command.aggregate;
@@ -11,7 +11,7 @@ const $ = db.command.aggregate;
 exports.main = async (event, context) => {
   const _ = db.command;
   return await db.collection('bookList').aggregate().match({
-    _openid: event._openId,
+    _openid: event.userInfo.openId,
     amtType: event.amtType,
     bookYear:event.year,
     bookMonth: { $gte: event.beginMonth, $lte: event.endMonth }

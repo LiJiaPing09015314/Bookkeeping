@@ -19,7 +19,7 @@
   >
     <view 
       wx:for="{{chats}}"
-      wx:key="{{item._id}}"
+      wx:key="item._id"
       id="item-{{index}}"
       class="message {{openId == item._openid ? 'message__self' : ''}}"
     >

@@ -3,23 +3,23 @@ const cloud = require('wx-server-sdk')
 
 cloud.init({
   traceUser: true,
-  // env: 'test-gp4ml'
+  // env:'book-5gutgylj4b76278c'
 });
 const db = cloud.database();
 const _ = db.command;
 const $ = db.command.aggregate;
 // 云函数入口函数
 exports.main = async (event, context) => {
-  let openid = event._openId;
+  let openid = event.userInfo.openId;
   let planList = await db.collection('planList').where({
     type: event.type,
-    _openid: _.eq(openid)
+    user: _.eq(openid)
   }).get();
-  console.log(planList)
+  planList = planList.data;
   for(let key in planList){
     let count = await db.collection('bookList').aggregate().match({
       amtType:event.type,
-      _openid: openid,
+      openid: openid,
       planId: planList[key]._id
     }).group({
       _id:null,
@@ -30,6 +30,6 @@ exports.main = async (event, context) => {
   return planList;
   // return await db.collection('planList').where({
   //   type: event.type,
-  //   _openid: _.eq(openid)
+  //   user: _.eq(openid)
   // }).get();
 }

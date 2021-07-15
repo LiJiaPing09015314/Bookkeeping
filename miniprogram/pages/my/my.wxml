@@ -6,7 +6,7 @@
 </view>
 <!-- 菜单们 -->
 <view class="menus_wrapper clearfix">
-  <view class="menu_item" wx:for="{{menus}}" wx:for-index="idx" wx:key="{{idx}}" 
+  <view class="menu_item" wx:for="{{menus}}" wx:for-index="idx" wx:key="idx" 
     catchtap="menuClick" data-idx="{{idx}}">
     <image src="{{'/utils/icons/'+item.icon+'.png'}}"></image>
     <text>{{item.name}}</text>

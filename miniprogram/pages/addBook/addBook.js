@@ -62,7 +62,7 @@ Page({
         type: _this.data.activeTab
       },
       success(res) {
-        console.log("getPlanList1:", res,_this.data.planId);
+        console.log("getPlanList:", res,_this.data.planId);
         let planList = res.result ? res.result:[];
         planList.unshift({
           name:'选择计划',
@@ -195,7 +195,6 @@ Page({
       bookTypeId: bookType._id,
       planId:data.planList[data.planIdx]._id
     }
-    
     if (data.remark) {
       let remarkArr = this.data.remarkArr;
       if (remarkArr[bookType._id]){
@@ -230,9 +229,9 @@ Page({
         params:params,
         success(res){
           console.log("addBook:",res);
-          app.showModal('添加成功!',()=>{
+          // app.showModal('添加成功!',()=>{
             wx.navigateBack();
-          });
+          // });
         },
         fail(res){
           console.log("addBookFail:",res);

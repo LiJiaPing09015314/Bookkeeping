@@ -3,6 +3,7 @@ const cloud = require('wx-server-sdk');
 
 cloud.init({
   traceUser: true,
+  // env:'book-5gutgylj4b76278c'
 });
 
 // 云函数入口函数

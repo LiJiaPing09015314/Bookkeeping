@@ -3,13 +3,13 @@ const cloud = require('wx-server-sdk')
 
 cloud.init({
   traceUser: true,
-  // env: 'test-gp4ml'
+  // env:'book-5gutgylj4b76278c'
 });
 const db = cloud.database();
 // 云函数入口函数
 exports.main = async (event, context) => {
   await db.collection('bookList').where({
-    _openid:event._openid,
+    openid:event.userInfo.openid,
     planId:event.id
   }).update({
     data:{
@@ -18,6 +18,6 @@ exports.main = async (event, context) => {
   });
   return await db.collection('planList').where({
     _id: event.id,
-    _openid: event._openid
+    openid: event.userInfo.openid
   }).remove();
 }

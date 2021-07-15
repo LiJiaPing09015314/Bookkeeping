@@ -11,6 +11,14 @@ Page({
   onLoad: function (options) {
   },
   onShow: function () {
+    app.getAjax({
+      url:'login',
+      params:{},
+      success:res=>{
+        console.log('[云函数] [login] user openid: ', res.result.openid)
+        app.globalData.openid = res.result.openid
+      }
+    })
     let dateObj = app.getDateInfo();
     this.initData(dateObj.year, dateObj.month);
   },

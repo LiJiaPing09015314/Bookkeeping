@@ -5,7 +5,6 @@ Page({
     bookTypeList:[],//类型列表
     deleteBtnIdx:-1,//显示删除按钮的索引
   },
-  
   onLoad: function (options) {
     if(options.type){
       this.setData({
@@ -14,23 +13,15 @@ Page({
     }
   },
   onShow(){
-    app.getAjax({
-      url:'login',
-      params:{},
-      success:res=>{
-        console.log('[云函数] [login] user openid: ', res.result.openid)
-        app.globalData.openid = res.result.openid
-        this.getBookList();
-      }
-    })
+    this.getBookList();
     
   },
   getBookList(){//获取类型列表
     let _this = this;
-     app.getAjax({
+    app.getAjax({
       url:'getBookType',
       params:{
-        type:_this.data.amtType,
+        type:_this.data.amtType
       },
       success(res){
         console.log("getBookType:", res);

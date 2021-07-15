@@ -1,7 +1,7 @@
 <import src="/components/amtType.wxml"/>
 <template is="amtType" data="{{amtType}}"></template>
 <view class="book_type_list_wrapper clearfix">
-  <view class="book_type_list {{deleteBtnIdx==idx?'active':''}}" wx:for="{{bookTypeList}}" wx:for-index="idx" wx:key="{{idx}}">
+  <view class="book_type_list {{deleteBtnIdx==idx?'active':''}}" wx:for="{{bookTypeList}}" wx:for-index="idx" wx:key="idx">
     <text class="delete_icon" catchtap="showDeleteBtn" data-idx="{{idx}}"></text>
     <view class="icon_wrapper">
       <image src="{{'/utils/icons/'+item.icon+'.png'}}"></image>

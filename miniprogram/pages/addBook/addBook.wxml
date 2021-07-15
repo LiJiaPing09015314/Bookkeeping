@@ -5,7 +5,7 @@
 <view class="padding_80"></view>
 <view class="booktype_wrapper clearfix {{activeType != -1?'padding':''}}">
   <view class="booktype_item {{activeType==idx?'active':''}}" catchtap="selectBookType" data-idx="{{idx}}"
-    wx:for="{{bookTypeList}}" wx:for-index="idx" wx:key="{{idx}}">
+    wx:for="{{bookTypeList}}" wx:for-index="idx" wx:key="idx">
     <view class="booktype_image_wrapper">
       <image src="{{'/utils/icons/'+item.icon+'.png'}}"></image>
     </view>
@@ -22,7 +22,7 @@
   <scroll-view hidden="{{selectTypeRemarks.length==0}}" class="remark_tips">
     <text>推荐：</text>
     <text class="remark_tip" catchtap="setRemarkByTip" data-remark="{{item}}"
-      wx:for="{{selectTypeRemarks}}" wx:for-index="idx" wx:key="{{idx}}">{{item}}</text>
+      wx:for="{{selectTypeRemarks}}" wx:for-index="idx" wx:key="idx">{{item}}</text>
   </scroll-view>
   <view class="keyboard_top">
     <view class="keyboard_remark">

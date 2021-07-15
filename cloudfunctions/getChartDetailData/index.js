@@ -3,7 +3,7 @@ const cloud = require('wx-server-sdk')
 
 cloud.init({
   traceUser:true,
-  // env:'test-gp4ml'
+  // env:'book-5gutgylj4b76278c'
 });
 const db = cloud.database();
 const _ = db.command;
@@ -15,7 +15,7 @@ exports.main = async (event, context) => {
     bookYear: event.year-0,
     bookTypeId:event.id
   };
-  params._openid = event._openId;
+  params.openid = event.userInfo.openId;
   // return params;
   return await db.collection('bookList').where(params)
   .orderBy('bookMonth', 'desc')
