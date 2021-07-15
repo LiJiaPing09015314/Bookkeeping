@@ -6,7 +6,7 @@ cloud.init({
   // env:'book-5gutgylj4b76278c'
 });
 const db = cloud.database();
-const _ = db.command;
+const _ = db.command ;
 // 云函数入口函数  
 exports.main = async (event, context) => {
   let openid = event.userInfo.openId;
