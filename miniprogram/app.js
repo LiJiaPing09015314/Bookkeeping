@@ -86,10 +86,10 @@ App({
       year:date.getFullYear(),
       month:date.getMonth()+1,
       date:date.getDate(),
-      week:date.getDay()
+       week:date.getDay()
     }
   },
-  changeFooter(e){//点击底部按钮
+  changeFooter(e){//点击 底部按钮
     let url = e.currentTarget.dataset.url;
     if(e.currentTarget.dataset.method){
       this.navigate(`/pages/${url}/${url}`);
